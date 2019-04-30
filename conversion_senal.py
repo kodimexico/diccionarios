@@ -1,3 +1,15 @@
+def HexToByte(hex_str):
+    bytes = []
+    hex_str = ''.join(hex_str.split(" "))
+
+    for i in range(0, len(hex_str), 2):
+        bytes.append(chr(int(hex_str[i:i + 2], 0)))
+
+    return ''.join(bytes)
+
+def ByteTOHex(byte_str):
+    return ''.join(["%02X" % ord(x) for x in byte_str]).strip()
+
 # Simulacion de senal de entrada
 input = ({'D2': ['42.00.00.02.FF.FF.00.00', '32.44.AE.02.FF.FF.00.00'],
 '170': ['30.01.2F.00.00.00.00.00'],
