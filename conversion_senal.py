@@ -3,7 +3,7 @@ def HexToByte(hex_str):
     hex_str = ''.join(hex_str.split(" "))
 
     for i in range(0, len(hex_str), 2):
-        bytes.append(chr(int(hex_str[i:i + 2], 0)))
+        bytes.append(chr(int(hex_str[i:i + 2], 16)))
 
     return ''.join(bytes)
 
